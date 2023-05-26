@@ -15,7 +15,7 @@ public class LwcLookupController {
       try{
         Messaging.sendEmail(new Messaging.SingleEmailMessage[] { email });
     }catch(exception e){
-        System.debug(e.getMessage());
+        System.debug('Message'+e.getMessage());
     }
     }
   }
