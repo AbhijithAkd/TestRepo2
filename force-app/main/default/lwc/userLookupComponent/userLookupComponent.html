@@ -1,0 +1,22 @@
+<template>
+    <lightning-card title="Send Email"> 
+      <template if:true={dsf}>
+      <div class="slds-m-around_small">
+        <b>
+      <c-lwc-lookup lookup-label="User" object-api-name="User" icon-name="standard:user" class="slds-p-bottom_xxx-small" onrecordselection={onUserSelection} ></c-lwc-lookup>
+        </b>
+    <hr></hr>
+       <lightning-button variant="brand" disabled={buttonvis} label="Next"  onclick={handleClick} class="slds-align_absolute-center button" icon-name="utility:copy"></lightning-button>
+    </div>
+  </template>
+  <template if:false={dsf}>
+    <div class="slds-m-around_small">
+    <lightning-input type="text" label="To" value={userRecordEmail} disabled="true"></lightning-input>
+    <lightning-input type="text" label="From" value={currUserEmail} disabled="true"></lightning-input>
+    <lightning-input type="text" label="Subject" onchange={handleSubjectChange}></lightning-input>
+    <lightning-textarea name="input1" label="Content" onchange={handleContentChange}></lightning-textarea>
+    <lightning-button variant="brand" label="Send Email" onclick={sendEmail}></lightning-button>
+  </div>
+  </template>
+    </lightning-card>
+  </template>

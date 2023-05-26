@@ -1,0 +1,49 @@
+<template>
+    <template if:true={page1}>
+    <lightning-quick-action-panel header="Form Action">
+        <div style="margin:0" class="slds-section slds-is-open">
+            <h3 class="slds-section__title slds-theme_shade">
+            <span class="slds-truncate slds-p-horizontal_small" title="Section Title" style="font-style: normal;font-weight: 500;font-size: 14px;line-height: 32px;"><strong>Form Details</strong></span>
+            </h3>
+        <div align="left" aria-hidden="false" class="slds-section__content slds-form_horizontal">
+            <lightning-input type="text" label="Abc" placeholder="Enter Abc" value={abc} onchange={handleabcchange} ></lightning-input>
+            <lightning-input type="text" label="Cde" placeholder="Enter Cde" value={cde} onchange={handlecdechange} ></lightning-input>
+            <template if:true={showInp}>
+            <lightning-input type="text" label="Fgh" placeholder="Enter Fgh" value={fgh} class="hidee" onchange={handlefghchange} ></lightning-input>
+            </template>
+        </div>
+        </div>
+    <div slot="footer">
+        <lightning-button
+            variant="neutral"
+            label="Cancel"
+            onclick={handleCancel}
+        ></lightning-button>
+        <lightning-button
+            variant="brand"
+            label="Next"
+            onclick={handleNext}
+            class="slds-m-left_x-small"
+        ></lightning-button>
+    </div>
+</lightning-quick-action-panel>
+</template>
+<template if:true={page2}>
+    <lightning-quick-action-panel header="Form Action">
+        <lightning-input type="text" label="Ijk" placeholder="Enter Ijk" value={ijk} onchange={handleijkchange} ></lightning-input>
+        <div slot="footer">
+            <lightning-button
+                variant="neutral"
+                label="Previous"
+                onclick={handlePrevious}
+            ></lightning-button>
+            <lightning-button
+                variant="brand"
+                label="Save"
+                onclick={handleSave}
+                class="slds-m-left_x-small"
+            ></lightning-button>
+        </div>
+    </lightning-quick-action-panel>
+</template>
+</template>

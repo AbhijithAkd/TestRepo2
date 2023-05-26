@@ -1,0 +1,23 @@
+<template>
+    <lightning-card title="Send Email"> 
+      <template if:true={dsf}>
+      <div class="slds-m-around_small">
+        <b>
+      <c-lwc-multi-select object-name="User" field-name="Name" icon-name="standard:user" class="slds-p-bottom_xxx-small" onuserselected={onUserSelection} ></c-lwc-multi-select>
+        </b>
+
+    <hr></hr>
+       <lightning-button variant="brand" disabled={buttonvis} label="Next"  onclick={handleClick} class="slds-align_absolute-center button" icon-name="utility:copy"></lightning-button>
+    </div>
+  </template>
+  <template if:false={dsf}>
+    <div class="slds-m-around_small">
+    <lightning-input type="text" label="To" value={userRecordEmail} disabled="true"></lightning-input>
+    <lightning-input type="text" label="From" value={currUserEmail} disabled="true"></lightning-input>
+    <lightning-combobox name="template" label="Template" value={value} options={TemplateOptions} onchange={handleTemplateChange}> </lightning-combobox>
+    <lightning-button variant="brand" label="Previous" onclick={Previous}></lightning-button>
+    <lightning-button variant="brand" label="Send Email" onclick={sendEmail}></lightning-button>
+  </div>
+  </template>
+    </lightning-card>
+  </template>

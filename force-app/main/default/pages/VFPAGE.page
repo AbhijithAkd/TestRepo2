@@ -1,0 +1,14 @@
+<apex:page >
+<!-- Begin Default Content REMOVE THIS -->
+<h1>Congratulations</h1>
+This is your new Page: VFPAGE
+<!-- End Default Content REMOVE THIS -->
+<apex:pageBlock Title="Page Block">
+  <apex:pageBlockSection Title="Section 1">
+  This is section 1
+  </apex:pageBlockSection>
+  <apex:pageBlockSection Title="Section 2">
+  This is section 2
+  </apex:pageBlockSection>
+</apex:pageBlock>
+</apex:page>

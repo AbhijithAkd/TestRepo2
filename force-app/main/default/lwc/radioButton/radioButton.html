@@ -1,0 +1,16 @@
+<template>
+    <fieldset class="slds-form-element">
+        <legend class="slds-form-element__legend slds-form-element__label">Radio Group Label</legend>
+        <div class="slds-form-element__control">
+            <span class="slds-radio">
+                <template for:each={options} for:item="op" for:index="index" key={op.value}>
+                    <input checked={op.checked} type="radio" key={op.value}  name={op.label} value={op.label} data-value={op.value}/>
+                    <label class="slds-radio_button__label" key={op.value} for={op.label}>
+                        <span class="slds-radio_faux"></span>
+                        <span class="slds-form-element__label">{op.label}</span>
+                    </label>
+                    </template>
+                </span>
+        </div>
+    </fieldset>
+</template>

@@ -1,0 +1,10 @@
+.badge {
+    --sds-c-badge-color-background: #0176d3;
+    font-size: medium;
+}
+.icon {
+    padding-right: 2%;
+}
+.white-icon{
+    --lwc-colorTextIconDefault: white;
+}

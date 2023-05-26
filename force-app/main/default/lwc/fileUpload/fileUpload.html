@@ -1,0 +1,22 @@
+<template>
+    <lightning-quick-action-panel header="Form Action">
+        <lightning-file-upload
+        label="Attach receipt"
+        name="fileUploader"
+        onuploadfinished={handleUploadFinished}>
+    </lightning-file-upload>
+        <div slot="footer">
+            <lightning-button
+                variant="neutral"
+                label="Cancel"
+                onclick={handleCancel}
+            ></lightning-button>
+            <lightning-button
+                variant="brand"
+                label="Save"
+                onclick={handleSave}
+                class="slds-m-left_x-small"
+            ></lightning-button>
+        </div>
+    </lightning-quick-action-panel>
+</template>
